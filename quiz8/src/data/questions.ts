@@ -10,15 +10,5 @@ export const questions: Question[] = [
             'Driver de CD'
         ],
         answer: 1
-    },
-    {
-        question: 'Qual peça do computador, é responsavel pelo processamento de dados?',
-        options: [
-            'Hd',
-            'Processador',
-            'Memória',
-            'Driver de CD'
-        ],
-        answer: 1
     }
 ]
