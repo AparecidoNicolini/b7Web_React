@@ -28,6 +28,12 @@ export default function Home() {
     loadNextQuestion();
   };
 
+  const handleRestartButton = () => {
+    setAnswers([]);
+    setCurrentQuestion(0);
+    setShowResult(false);
+  }
+
   return (
     <div className='w-screen h-screen flex items-center justify-center'>
       <div className='w-full max-w-lg bg-white rounded-md shadow shadow-black'>
@@ -47,7 +53,7 @@ export default function Home() {
         <div className='p-5 text-center border-t border-gray-300'>
           {!showResult && `Pergunta ${currentQuestion + 1} de ${questions.length} pergunta${questions.length === 1 ? '' : 's'}`}
           {showResult && 
-            <button className='px-3 py-2 rounded-md bg-blue-800 text-white'>Reiniciar o Quiz</button>
+            <button onClick={handleRestartButton} className='px-3 py-2 rounded-md bg-blue-800 text-white'>Reiniciar o Quiz</button>
           }
         </div>
       </div>
