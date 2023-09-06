@@ -1,14 +1,14 @@
 "use client"
 
 import { Header } from "@/components/Header";
-import { CountContext, CountInitialData } from "@/contexts/CountContext";
+import { CountProvider } from "@/contexts/CountContext";
 
 const Page = () => {
   return (
     <div className="container mx-auto w-screen h-screen">
-      <CountContext.Provider value={CountInitialData}>
-      <Header/>
-      </CountContext.Provider>
+      <CountProvider>
+        <Header />
+      </CountProvider>
     </div>
   );
 }
